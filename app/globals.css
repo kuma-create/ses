@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* デザインブリーフに基づいてカラートークンを更新 */
+  --background: oklch(1 0 0); /* #ffffff */
+  --foreground: oklch(0.2 0 0); /* #333333 - より濃い色に変更 */
+  --card: oklch(0.98 0 0); /* #f1f5f9 */
+  --card-foreground: oklch(0.2 0 0); /* #333333 - より濃い色に変更 */
+  --popover: oklch(1 0 0); /* #ffffff */
+  --popover-foreground: oklch(0.2 0 0); /* #333333 - より濃い色に変更 */
+  --primary: oklch(0.45 0.25 250); /* #1E63F3 ブランドブルー */
+  --primary-foreground: oklch(1 0 0); /* #ffffff */
+  --secondary: oklch(0.65 0.15 160); /* #10b981 エメラルド */
+  --secondary-foreground: oklch(0.1 0 0); /* #1a1a1a - より濃い色に変更 */
+  --muted: oklch(0.96 0 0); /* #f1f5f9 */
+  --muted-foreground: oklch(0.4 0 0); /* #666666 - より濃い色に変更 */
+  --accent: oklch(0.65 0.15 160); /* #10b981 エメラルド */
+  --accent-foreground: oklch(0.1 0 0); /* #1a1a1a - より濃い色に変更 */
+  --destructive: oklch(0.55 0.2 35); /* #ea580c オレンジ */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff */
+  --border: oklch(0.9 0 0); /* #e0e0e0 */
+  --input: oklch(1 0 0); /* #ffffff */
+  --ring: oklch(0.45 0.25 250); /* #1E63F3 */
+  --chart-1: oklch(0.45 0.25 250); /* #1E63F3 */
+  --chart-2: oklch(0.65 0.15 160); /* #10b981 */
+  --chart-3: oklch(0.6 0.2 40); /* #f97316 */
+  --chart-4: oklch(0.2 0 0); /* #333333 - より濃い色に変更 */
+  --chart-5: oklch(0.96 0 0); /* #f1f5f9 */
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0); /* #ffffff */
+  --sidebar-foreground: oklch(0.2 0 0); /* #333333 - より濃い色に変更 */
+  --sidebar-primary: oklch(0.45 0.25 250); /* #1E63F3 */
+  --sidebar-primary-foreground: oklch(1 0 0); /* #ffffff */
+  --sidebar-accent: oklch(0.98 0 0); /* #f8fafc */
+  --sidebar-accent-foreground: oklch(0.2 0 0); /* #333333 - より濃い色に変更 */
+  --sidebar-border: oklch(0.94 0 0); /* #e2e8f0 */
+  --sidebar-ring: oklch(0.45 0.25 250); /* #1E63F3 */
+}
+
+.dark {
+  --background: oklch(0.08 0 0); /* #1a1a1a */
+  --foreground: oklch(0.95 0 0); /* #f1f5f9 */
+  --card: oklch(0.12 0 0); /* #262626 */
+  --card-foreground: oklch(0.95 0 0); /* #f1f5f9 */
+  --popover: oklch(0.08 0 0); /* #1a1a1a */
+  --popover-foreground: oklch(0.95 0 0); /* #f1f5f9 */
+  --primary: oklch(0.55 0.25 250); /* より明るいブランドブルー */
+  --primary-foreground: oklch(1 0 0); /* #ffffff */
+  --secondary: oklch(0.7 0.15 160); /* より明るいエメラルド */
+  --secondary-foreground: oklch(0.08 0 0); /* #1a1a1a */
+  --muted: oklch(0.15 0 0); /* #333333 */
+  --muted-foreground: oklch(0.7 0 0); /* #a1a1aa */
+  --accent: oklch(0.7 0.15 160); /* より明るいエメラルド */
+  --accent-foreground: oklch(0.08 0 0); /* #1a1a1a */
+  --destructive: oklch(0.6 0.2 35); /* より明るいオレンジ */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff */
+  --border: oklch(0.2 0 0); /* #404040 */
+  --input: oklch(0.12 0 0); /* #262626 */
+  --ring: oklch(0.55 0.25 250); /* より明るいブランドブルー */
+  --chart-1: oklch(0.55 0.25 250);
+  --chart-2: oklch(0.7 0.15 160);
+  --chart-3: oklch(0.65 0.2 40);
+  --chart-4: oklch(0.7 0 0);
+  --chart-5: oklch(0.15 0 0);
+  --sidebar: oklch(0.1 0 0); /* #1f1f1f */
+  --sidebar-foreground: oklch(0.95 0 0); /* #f1f5f9 */
+  --sidebar-primary: oklch(0.55 0.25 250);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.15 0 0); /* #333333 */
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.2 0 0); /* #404040 */
+  --sidebar-ring: oklch(0.55 0.25 250);
+}
+
+@theme inline {
+  /* DM Sansフォントを追加 */
+  --font-sans: "DM Sans", var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* カスタムアニメーションとホバー効果を追加 */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .button-hover {
+    @apply transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  /* サイドバーのホバー状態でのテキスト色を強制的に白色に設定 */
+  .sidebar-link:hover .sidebar-description {
+    color: white !important;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
