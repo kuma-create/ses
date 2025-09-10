@@ -75,7 +75,7 @@ ${talent.name}様のご経験とスキルが本案件に非常にマッチして
     <div className="min-h-screen bg-background pt-16 lg:pt-0">
       <Header />
 
-      <main className="lg:pl-72 p-4 lg:p-6 space-y-6">
+      <main className="lg:ml-72 p-4 lg:p-6 space-y-6">
         {/* ページヘッダー */}
         <div className="flex items-center gap-4">
           <Button variant="outline" size="sm" asChild>

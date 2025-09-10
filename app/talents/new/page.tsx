@@ -32,7 +32,7 @@ export default function NewTalentPage() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="lg:pl-72">
+      <main className="lg:ml-72">
         <div className="p-6 space-y-6">
           {/* ページヘッダー */}
           <div className="flex items-center gap-4">

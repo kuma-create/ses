@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function SettingsLoading() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 lg:pl-72">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 lg:ml-72">
       <div className="container mx-auto p-6 pt-16 lg:pt-6 max-w-6xl">
         <div className="mb-8">
           <Skeleton className="h-8 w-32 mb-2" />

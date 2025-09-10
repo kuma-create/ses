@@ -37,7 +37,7 @@ export default function TalentsPage() {
     <div className="min-h-screen bg-background pt-16 lg:pt-0">
       <Header />
 
-      <main className="lg:pl-72 p-4 lg:p-6 space-y-6">
+      <main className="lg:ml-72 p-4 lg:p-6 space-y-6">
         {/* ページヘッダー */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>

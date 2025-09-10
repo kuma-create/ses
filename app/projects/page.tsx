@@ -38,7 +38,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-16 lg:pt-0 lg:pl-72">
+      <main className="pt-16 lg:pt-0 lg:ml-72">
         <div className="p-4 md:p-6 space-y-6">
           {/* ページヘッダー */}
           <div className="flex items-center justify-between">
